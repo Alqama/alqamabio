@@ -1,6 +1,6 @@
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Index = () => {
   return (
@@ -29,10 +29,10 @@ const Index = () => {
               className="w-32 h-32 rounded-full border-4 border-indigo-500 mx-auto mb-4 object-cover"
             />
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mb-2">
-              John Doe
+              Mohd Alqama Ansari
             </h1>
             <p className="text-gray-400 text-lg md:text-xl">
-              Full Stack Developer & AI Enthusiast
+              Product Manager & AI Enthusiast
             </p>
           </div>
 
@@ -48,9 +48,6 @@ const Index = () => {
           <div className="flex justify-center gap-4 mb-12">
             <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
               <Github className="h-5 w-5 text-indigo-500" />
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
-              <Twitter className="h-5 w-5 text-indigo-500" />
             </Button>
             <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
               <Linkedin className="h-5 w-5 text-indigo-500" />
