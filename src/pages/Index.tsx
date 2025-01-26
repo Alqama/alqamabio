@@ -27,7 +27,7 @@ const Index = () => {
               <img
                 src="/lovable-uploads/f949c44d-1809-4db2-b135-24fc096b51cf.png"
                 alt="Profile"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center scale-125"
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mb-2">
