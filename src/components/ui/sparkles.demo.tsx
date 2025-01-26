@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { SparklesCore } from "./sparkles";
+import { SparklesCore } from "@/components/ui/sparkles";
 
-function SparklesPreview() {
+export function SparklesPreview() {
   return (
     <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
@@ -32,7 +32,7 @@ function SparklesPreview() {
   );
 }
 
-function SparklesPreviewDark() {
+export function SparklesPreviewDark() {
   return (
     <div className="h-[40rem] relative w-full bg-slate-950 flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="w-full absolute inset-0 h-screen">
@@ -54,7 +54,7 @@ function SparklesPreviewDark() {
   );
 }
 
-function SparklesPreviewColorful() {
+export function SparklesPreviewColorful() {
   return (
     <div className="h-[40rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="w-full absolute inset-0 h-screen">
@@ -80,5 +80,3 @@ function SparklesPreviewColorful() {
     </div>
   );
 }
-
-export { SparklesPreview, SparklesPreviewDark, SparklesPreviewColorful };
