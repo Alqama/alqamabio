@@ -23,11 +23,13 @@ const Index = () => {
         {/* Profile Content */}
         <div className="relative z-10 text-center px-4">
           <div className="mb-8">
-            <img
-              src="/lovable-uploads/f949c44d-1809-4db2-b135-24fc096b51cf.png"
-              alt="Profile"
-              className="w-32 h-32 rounded-full border-4 border-indigo-500 mx-auto mb-4 object-cover"
-            />
+            <div className="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-indigo-500 overflow-hidden">
+              <img
+                src="/lovable-uploads/f949c44d-1809-4db2-b135-24fc096b51cf.png"
+                alt="Profile"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mb-2">
               Mohd Alqama Ansari
             </h1>
