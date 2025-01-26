@@ -24,7 +24,7 @@ const Index = () => {
         <div className="relative z-10 text-center px-4">
           <div className="mb-8">
             <img
-              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+              src="/lovable-uploads/f949c44d-1809-4db2-b135-24fc096b51cf.png"
               alt="Profile"
               className="w-32 h-32 rounded-full border-4 border-indigo-500 mx-auto mb-4 object-cover"
             />
