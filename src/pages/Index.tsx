@@ -48,25 +48,31 @@ const Index = () => {
 
           {/* Social Links */}
           <div className="flex justify-center gap-4 mb-12">
-            <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
-              <Github className="h-5 w-5 text-indigo-500" />
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
-              <Linkedin className="h-5 w-5 text-indigo-500" />
-            </Button>
-            <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
-              <Mail className="h-5 w-5 text-indigo-500" />
-            </Button>
+            <a href="https://github.com/Alqama" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
+                <Github className="h-5 w-5 text-indigo-500" />
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/mohd-alqama-ansari-79634241/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
+                <Linkedin className="h-5 w-5 text-indigo-500" />
+              </Button>
+            </a>
+            <a href="mailto:alqamaansari@gmail.com">
+              <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
+                <Mail className="h-5 w-5 text-indigo-500" />
+              </Button>
+            </a>
           </div>
 
           {/* Skills Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-            {["React", "Node.js", "TypeScript", "AI/ML"].map((skill) => (
+            {["Problem Solver", "Empathy", "Strategic Thinking", "Communication"].map((skill) => (
               <div
                 key={skill}
                 className="bg-gradient-to-r from-indigo-950 to-purple-950 p-4 rounded-lg border border-indigo-800"
               >
-                <p className="text-indigo-400 font-medium">{skill}</p>
+                <p className="text-indigo-400 font-medium text-sm">{skill}</p>
               </div>
             ))}
           </div>
