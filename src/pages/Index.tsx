@@ -40,9 +40,15 @@ const Index = () => {
 
           {/* Bio Section */}
           <div className="max-w-2xl mx-auto mb-8">
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Passionate about creating innovative solutions at the intersection of technology and design. 
               Specializing in building scalable applications with modern technologies.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              With over a decade of experience building successful B2B2C platforms and digital products, I help companies bridge the gap between vision and execution.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              My expertise lies in rapid prototyping, product strategy, and helping teams achieve product-market fit quickly and effectively. I've led product initiatives for companies like Mosambee, ZenoHealth, and Flyrobe, consistently delivering solutions that transform business objectives into engaging digital experiences.
             </p>
           </div>
 
