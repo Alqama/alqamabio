@@ -1,6 +1,6 @@
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Robot, Code, Database, Settings } from "lucide-react";
+import { Github, Linkedin, Mail, Bot, Code, Database, Settings } from "lucide-react";
 
 const Index = () => {
   return (
@@ -82,7 +82,7 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-indigo-400 mb-8">THE FUTURE MAKER'S TOOLKIT</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all">
-                <Robot className="w-8 h-8 text-indigo-400 mb-4" />
+                <Bot className="w-8 h-8 text-indigo-400 mb-4" />
                 <h3 className="text-lg font-semibold text-indigo-300 mb-2">AI Integration</h3>
                 <p className="text-gray-400 text-sm">Seamlessly integrate AI capabilities into existing systems</p>
               </div>
