@@ -1,44 +1,8 @@
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { useState } from "react";
-import { WaitingListSignupModal } from "@/components/WaitingListSignupModal";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Index = () => {
-  const [selectedPrompt, setSelectedPrompt] = useState<string | null>(null);
-
-  const handlePromptClick = (promptType: string) => {
-    setSelectedPrompt(promptType);
-  };
-
-  const closeModal = () => {
-    setSelectedPrompt(null);
-  };
-
-  const toolkitItems = [
-    {
-      title: "AI Product Strategy",
-      description: "Get AI-powered insights for your product strategy and roadmap planning",
-      promptType: "prompt1"
-    },
-    {
-      title: "Market Analysis",
-      description: "Analyze market trends and competition with AI assistance",
-      promptType: "prompt2"
-    },
-    {
-      title: "User Research",
-      description: "Generate user research insights and personas automatically",
-      promptType: "prompt3"
-    },
-    {
-      title: "Feature Prioritization",
-      description: "Optimize your feature backlog with AI recommendations",
-      promptType: "prompt4"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-black overflow-hidden">
       {/* Hero Section with Particles */}
@@ -76,15 +40,9 @@ const Index = () => {
 
           {/* Bio Section */}
           <div className="max-w-2xl mx-auto mb-8">
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed">
               Passionate about creating innovative solutions at the intersection of technology and design. 
               Specializing in building scalable applications with modern technologies.
-            </p>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              With over a decade of experience building successful B2B2C platforms and digital products, I help companies bridge the gap between vision and execution.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              My expertise lies in rapid prototyping, product strategy, and helping teams achieve product-market fit quickly and effectively. I've led product initiatives for companies like Mosambee, ZenoHealth, and Flyrobe, consistently delivering solutions that transform business objectives into engaging digital experiences.
             </p>
           </div>
 
@@ -108,7 +66,7 @@ const Index = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
             {["Problem Solver", "Empathy", "Strategic Thinking", "Communication"].map((skill) => (
               <div
                 key={skill}
@@ -118,44 +76,12 @@ const Index = () => {
               </div>
             ))}
           </div>
-
-          {/* Future Maker's Toolkit Section */}
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-white mb-8">THE FUTURE MAKER'S TOOLKIT</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {toolkitItems.map((item) => (
-                <Card key={item.promptType} className="bg-gradient-to-b from-indigo-950 to-purple-950 border-indigo-800">
-                  <CardHeader>
-                    <CardTitle className="text-white">{item.title}</CardTitle>
-                    <CardDescription className="text-gray-300">
-                      {item.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button 
-                      onClick={() => handlePromptClick(item.promptType)}
-                      className="w-full bg-indigo-600 hover:bg-indigo-700"
-                    >
-                      Join Waiting List
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Decorative Elements */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50" />
       </div>
-
-      {/* Waiting List Signup Modal */}
-      <WaitingListSignupModal
-        isOpen={!!selectedPrompt}
-        onClose={closeModal}
-        promptType={selectedPrompt || ""}
-      />
     </div>
   );
 };
