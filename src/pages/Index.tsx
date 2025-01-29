@@ -1,8 +1,37 @@
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { WaitingListSignupModal } from "@/components/WaitingListSignupModal";
 
 const Index = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPrompt, setSelectedPrompt] = useState("");
+
+  const handleWaitingListClick = (promptType: string) => {
+    setSelectedPrompt(promptType);
+    setIsModalOpen(true);
+  };
+
+  const futureFeatures = [
+    {
+      title: "AI Code Review",
+      description: "Get instant feedback on your code quality and potential improvements",
+    },
+    {
+      title: "Smart Refactoring",
+      description: "Automatically identify and suggest code refactoring opportunities",
+    },
+    {
+      title: "Test Generation",
+      description: "Generate comprehensive test suites for your components",
+    },
+    {
+      title: "Performance Optimization",
+      description: "Analyze and optimize your application's performance",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-black overflow-hidden">
       {/* Hero Section with Particles */}
@@ -66,7 +95,7 @@ const Index = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-16">
             {["Problem Solver", "Empathy", "Strategic Thinking", "Communication"].map((skill) => (
               <div
                 key={skill}
@@ -76,12 +105,42 @@ const Index = () => {
               </div>
             ))}
           </div>
+
+          {/* THE FUTURE MAKER'S TOOLKIT Section */}
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-white mb-8">THE FUTURE MAKER'S TOOLKIT</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {futureFeatures.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-400 mb-4">{feature.description}</p>
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent border-indigo-500 hover:bg-indigo-900 text-indigo-400"
+                    onClick={() => handleWaitingListClick(feature.title)}
+                  >
+                    Join Waiting List <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Decorative Elements */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50" />
       </div>
+
+      {/* Waiting List Modal */}
+      <WaitingListSignupModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        promptType={selectedPrompt}
+      />
     </div>
   );
 };
