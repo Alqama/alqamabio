@@ -1,6 +1,6 @@
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Robot, Code, Database, Settings } from "lucide-react";
 
 const Index = () => {
   return (
@@ -66,7 +66,7 @@ const Index = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
             {["Problem Solver", "Empathy", "Strategic Thinking", "Communication"].map((skill) => (
               <div
                 key={skill}
@@ -75,6 +75,36 @@ const Index = () => {
                 <p className="text-indigo-400 font-medium text-sm">{skill}</p>
               </div>
             ))}
+          </div>
+
+          {/* THE FUTURE MAKER'S TOOLKIT Section */}
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-indigo-400 mb-8">THE FUTURE MAKER'S TOOLKIT</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all">
+                <Robot className="w-8 h-8 text-indigo-400 mb-4" />
+                <h3 className="text-lg font-semibold text-indigo-300 mb-2">AI Integration</h3>
+                <p className="text-gray-400 text-sm">Seamlessly integrate AI capabilities into existing systems</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all">
+                <Code className="w-8 h-8 text-indigo-400 mb-4" />
+                <h3 className="text-lg font-semibold text-indigo-300 mb-2">Modern Development</h3>
+                <p className="text-gray-400 text-sm">Building with cutting-edge frameworks and tools</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all">
+                <Database className="w-8 h-8 text-indigo-400 mb-4" />
+                <h3 className="text-lg font-semibold text-indigo-300 mb-2">Data Architecture</h3>
+                <p className="text-gray-400 text-sm">Designing scalable and efficient data solutions</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all">
+                <Settings className="w-8 h-8 text-indigo-400 mb-4" />
+                <h3 className="text-lg font-semibold text-indigo-300 mb-2">System Design</h3>
+                <p className="text-gray-400 text-sm">Creating robust and scalable architectures</p>
+              </div>
+            </div>
           </div>
         </div>
 
