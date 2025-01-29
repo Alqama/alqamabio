@@ -1,6 +1,6 @@
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight, Rocket, Code, Database, Settings } from "lucide-react";
 import { useState } from "react";
 import { WaitingListSignupModal } from "@/components/WaitingListSignupModal";
 
@@ -17,18 +17,22 @@ const Index = () => {
     {
       title: "AI Code Review",
       description: "Get instant feedback on your code quality and potential improvements",
+      icon: Code,
     },
     {
       title: "Smart Refactoring",
       description: "Automatically identify and suggest code refactoring opportunities",
+      icon: Settings,
     },
     {
       title: "Test Generation",
       description: "Generate comprehensive test suites for your components",
+      icon: Database,
     },
     {
       title: "Performance Optimization",
       description: "Analyze and optimize your application's performance",
+      icon: Rocket,
     },
   ];
 
@@ -115,6 +119,7 @@ const Index = () => {
                   key={feature.title}
                   className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all"
                 >
+                  <feature.icon className="w-8 h-8 text-indigo-500 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-400 mb-4">{feature.description}</p>
                   <Button
