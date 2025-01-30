@@ -112,6 +112,19 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-50" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-50" />
       </div>
+
+      {/* Footer Section */}
+      <div className="relative z-10 py-8 text-center">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xl text-indigo-400 font-semibold mb-2">Let's create something amazing...</p>
+          <a 
+            href="mailto:alqamaansari@gmail.com" 
+            className="text-gray-400 hover:text-indigo-400 transition-colors"
+          >
+            alqamaansari@gmail.com
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
