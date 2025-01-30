@@ -13,9 +13,18 @@ import { useToast } from "@/components/ui/use-toast";
 const AIIntegration = () => {
   const [systemType, setSystemType] = useState<string>("");
   const [useCase, setUseCase] = useState("");
-  const [techStack, setTechStack] = useState<string>("");
+  const [techStacks, setTechStacks] = useState<string[]>([]);
   const [integrationPlan, setIntegrationPlan] = useState<string[]>([]);
   const { toast } = useToast();
+
+  const handleTechStackChange = (value: string) => {
+    setTechStacks(prev => {
+      if (prev.includes(value)) {
+        return prev.filter(stack => stack !== value);
+      }
+      return [...prev, value];
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,7 +32,7 @@ const AIIntegration = () => {
     // This is a mock response - in a real application, this would come from an API
     const mockIntegrationSteps = [
       "1. Setup Development Environment",
-      `2. Install necessary ${techStack} dependencies`,
+      `2. Install necessary ${techStacks.join(", ")} dependencies`,
       "3. Create API endpoints for AI integration",
       "4. Implement authentication and security measures",
       "5. Test integration with sample data",
@@ -89,24 +98,24 @@ const AIIntegration = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-200 mb-2">
-                Current Tech Stack
+                Current Tech Stack (Multiple Selection)
               </label>
-              <Select onValueChange={setTechStack} required>
-                <SelectTrigger className="w-full bg-transparent border-indigo-500 text-white">
-                  <SelectValue placeholder="Select tech stack" />
-                </SelectTrigger>
-                <SelectContent className="bg-gray-900 border-indigo-500">
-                  {["Python", "Java", "Node.js", "PHP", "Ruby", ".NET"].map((tech) => (
-                    <SelectItem 
-                      key={tech} 
-                      value={tech.toLowerCase()}
-                      className="text-white hover:bg-gray-800"
-                    >
+              <div className="space-y-2 border border-indigo-500 rounded-md p-3 bg-transparent">
+                {["Python", "Java", "Node.js", "PHP", "Ruby", ".NET"].map((tech) => (
+                  <div key={tech} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={tech}
+                      checked={techStacks.includes(tech.toLowerCase())}
+                      onChange={() => handleTechStackChange(tech.toLowerCase())}
+                      className="mr-2"
+                    />
+                    <label htmlFor={tech} className="text-white cursor-pointer">
                       {tech}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
