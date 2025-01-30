@@ -6,7 +6,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section with Particles */}
-      <div className="h-screen relative flex flex-col items-center justify-center">
+      <div className="min-h-screen relative flex flex-col items-center justify-center">
         <div className="absolute inset-0">
           <SparklesCore
             id="tsparticlesfullpage"
