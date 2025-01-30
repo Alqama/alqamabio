@@ -57,12 +57,16 @@ const AIIntegration = () => {
                 System Type
               </label>
               <Select onValueChange={setSystemType} required>
-                <SelectTrigger className="w-full bg-transparent border-indigo-500">
+                <SelectTrigger className="w-full bg-transparent border-indigo-500 text-white">
                   <SelectValue placeholder="Select system type" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-gray-900 border-indigo-500">
                   {["CRM", "ERP", "Web App", "Mobile App", "Database", "IoT"].map((type) => (
-                    <SelectItem key={type} value={type.toLowerCase()}>
+                    <SelectItem 
+                      key={type} 
+                      value={type.toLowerCase()}
+                      className="text-white hover:bg-gray-800"
+                    >
                       {type}
                     </SelectItem>
                   ))}
@@ -78,7 +82,7 @@ const AIIntegration = () => {
                 value={useCase}
                 onChange={(e) => setUseCase(e.target.value)}
                 placeholder="Describe how you want to integrate AI into your system..."
-                className="min-h-[120px] bg-transparent border-indigo-500"
+                className="min-h-[120px] bg-transparent border-indigo-500 text-white placeholder:text-gray-400"
                 required
               />
             </div>
@@ -88,12 +92,16 @@ const AIIntegration = () => {
                 Current Tech Stack
               </label>
               <Select onValueChange={setTechStack} required>
-                <SelectTrigger className="w-full bg-transparent border-indigo-500">
+                <SelectTrigger className="w-full bg-transparent border-indigo-500 text-white">
                   <SelectValue placeholder="Select tech stack" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-gray-900 border-indigo-500">
                   {["Python", "Java", "Node.js", "PHP", "Ruby", ".NET"].map((tech) => (
-                    <SelectItem key={tech} value={tech.toLowerCase()}>
+                    <SelectItem 
+                      key={tech} 
+                      value={tech.toLowerCase()}
+                      className="text-white hover:bg-gray-800"
+                    >
                       {tech}
                     </SelectItem>
                   ))}
