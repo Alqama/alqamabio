@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Bot, Code, Database, Settings } from "lucide-re
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black overflow-hidden">
+    <div className="min-h-screen bg-black">
       {/* Hero Section with Particles */}
       <div className="h-screen relative flex flex-col items-center justify-center">
         <div className="absolute inset-0">
