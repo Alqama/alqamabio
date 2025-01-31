@@ -43,16 +43,16 @@ export const StrategyForm = ({ onSubmit, isGenerating }: StrategyFormProps) => {
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger className="bg-black/50 border-indigo-800 text-gray-300">
-                    <SelectValue placeholder="Select a framework" />
+                    <SelectValue placeholder="Select a framework" className="text-gray-400" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-indigo-950 border-indigo-800">
-                  <SelectItem value="lean">Lean Startup</SelectItem>
-                  <SelectItem value="blue-ocean">Blue Ocean Strategy</SelectItem>
-                  <SelectItem value="jtbd">Jobs-to-be-Done (JTBD)</SelectItem>
-                  <SelectItem value="plg">Product-Led Growth (PLG)</SelectItem>
-                  <SelectItem value="agile">Agile Product Development</SelectItem>
-                  <SelectItem value="custom">Custom Strategy</SelectItem>
+                  <SelectItem value="lean" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">Lean Startup</SelectItem>
+                  <SelectItem value="blue-ocean" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">Blue Ocean Strategy</SelectItem>
+                  <SelectItem value="jtbd" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">Jobs-to-be-Done (JTBD)</SelectItem>
+                  <SelectItem value="plg" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">Product-Led Growth (PLG)</SelectItem>
+                  <SelectItem value="agile" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">Agile Product Development</SelectItem>
+                  <SelectItem value="custom" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">Custom Strategy</SelectItem>
                 </SelectContent>
               </Select>
             </FormItem>
@@ -102,14 +102,14 @@ export const StrategyForm = ({ onSubmit, isGenerating }: StrategyFormProps) => {
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger className="bg-black/50 border-indigo-800 text-gray-300">
-                    <SelectValue placeholder="Select an industry" />
+                    <SelectValue placeholder="Select an industry" className="text-gray-400" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-indigo-950 border-indigo-800">
-                  <SelectItem value="saas">SaaS</SelectItem>
-                  <SelectItem value="healthcare">Healthcare</SelectItem>
-                  <SelectItem value="fintech">FinTech</SelectItem>
-                  <SelectItem value="ecommerce">E-commerce</SelectItem>
+                  <SelectItem value="saas" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">SaaS</SelectItem>
+                  <SelectItem value="healthcare" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">Healthcare</SelectItem>
+                  <SelectItem value="fintech" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">FinTech</SelectItem>
+                  <SelectItem value="ecommerce" className="text-gray-300 hover:bg-indigo-900 focus:bg-indigo-900">E-commerce</SelectItem>
                 </SelectContent>
               </Select>
             </FormItem>
