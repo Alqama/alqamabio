@@ -95,7 +95,7 @@ const Index = () => {
               
               <div className="bg-gradient-to-r from-indigo-950 to-purple-950 p-6 rounded-xl border border-indigo-800 hover:border-indigo-600 transition-all">
                 <Code className="w-8 h-8 text-indigo-400 mb-4" />
-                <h3 className="text-lg font-semibold text-indigo-300 mb-2">Product Strategy for Modern Development</h3>
+                <h3 className="text-lg font-semibold text-indigo-300 mb-2">Next-Gen Product Strategy</h3>
                 <p className="text-gray-400 text-sm">Building with cutting-edge frameworks and tools</p>
               </div>
               
