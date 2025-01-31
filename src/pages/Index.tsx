@@ -2,6 +2,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Bot, Code, Database, Settings } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { StarBorder } from "@/components/ui/star-border";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -71,12 +72,14 @@ const Index = () => {
           {/* Skills Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
             {["Problem Solver", "Empathy", "Strategic Thinking", "Communication"].map((skill) => (
-              <div
+              <StarBorder
                 key={skill}
-                className="bg-gradient-to-r from-indigo-950 to-purple-950 p-4 rounded-lg border border-indigo-800"
+                as="div"
+                color="#4F46E5"
+                className="w-full"
               >
-                <p className="text-indigo-400 font-medium text-sm">{skill}</p>
-              </div>
+                <p className="text-indigo-400 font-medium">{skill}</p>
+              </StarBorder>
             ))}
           </div>
 
