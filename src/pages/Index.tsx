@@ -24,7 +24,7 @@ const Index = () => {
         </div>
         
         {/* Profile Content */}
-        <div className="relative z-10 text-center px-4">
+        <div className="relative z-10 text-center px-4 pt-8">
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-indigo-500 overflow-hidden">
               <img
