@@ -1,3 +1,4 @@
+
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Bot, Code, Database, Settings, FileUser } from "lucide-react";
@@ -66,7 +67,7 @@ const Index = () => {
                 <Mail className="h-5 w-5 text-indigo-500" />
               </Button>
             </a>
-            <a href="https://drive.google.com/file/d/1jXvAR_13iaqC9QRnXUvqEQ4l1adqfVeJ/view" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1NOubmCdTBHQPdpZsChPGkWTgyjq4P4ue/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="icon" className="rounded-full bg-transparent border-indigo-500 hover:bg-indigo-950">
                 <FileUser className="h-5 w-5 text-indigo-500" />
               </Button>
